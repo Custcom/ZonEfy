@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ZonEfy</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="title_block">
+        <img id='logo' src="logo.png" height="75px" width="75px">
+        <h1 class="title">ZonEfy</h1>
+
+        <div class="navigation">
+            <a id="alst" href="#">Products</a>
+            <a id="alst" href="#">About Us</a>
+            <a id="alst" href="#">Contact Us</a>
+        </div>
+    </div>
+    <div class="div1">
+        <div id="tag_line">
+            <h1>Scripting a revolution <br> in Neighborhood market:<br> Where innovation meets <span style="color: #E9C7B1;">"Legacy"</span>.</h1>
+            <p id="typedText"></p>
+        </div>
+        <img id="ecom_img" src="eclip.png" height="500px" width="500px">
+    </div>
+    <div class="box">
+        <nav>
+            <div class="prd1">
+                <h1>Retailer Side</h1>
+                <ul>
+                    <li>Set up your own customisable online store</li>
+                    <li>Easy-to-Use Inventory System</li>
+                    <li>Enhancing your Digital Market Presence</li>
+                    <li>Be a part of the offer ecosystem</li>
+                </ul>
+           
+            <img id="retailer" src="retailer1-removebg-preview.png" height="400px" width="400px"> </div>
+        </nav>
+        <nav>
+            <div class="prd2">
+                <img id="buyer" src="buyer__1_-removebg-preview.png" height="400px" width="400px" style="padding-right: 20px;">
+                <h1>Buyer Side</h1>
+                <ul>
+                    <li>Shop from your well known and trusted stores</li>
+                    <li>Exclusive offers in your neighborhood stores!</li>
+                    <li>Experience Ecommerce in a sleekest fashion</li>
+                    <li>And What more? The whole locality is in your phone!</li>
+                </ul>
+            </div>
+           
+        </nav>
+        <nav>
+            <div class="prd3">
+                <h1>Premium Features</h1>
+                <div style="padding-top: 40px;">
+                <p id="for_ret">For Retailers</p>
+                <ul>
+                    <li>Market Statistics</li>
+                    <li>Trending products in your zone</li>
+                    <li>Stock clearence suggestions</li>
+                </ul>
+            </div>
+            <img id="premium" src="premium-removebg-preview.png" height="400px" width="600px"></div>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const textContainer = document.getElementById('typedText');
+            const text = `ZonEfy revolutionizes the online shopping experience by seamlessly bridging the gap between local markets and the digital realm. With us, you'll not only discover an extensive array of products, from the tiniest trinkets to grandiose treasures, but also relish the warmth of a true neighborhood vibe. Say goodbye to the impersonal online shopping experience and embrace the charm of community-centric commerce with ZonEfy!.`;
+            let index = 0;
+            
+            function typeText() {
+                if (index < text.length) {
+                    textContainer.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(typeText, 400); // Adjust the speed (milliseconds per character)
+                }
+            }
+
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+                if (scrollPosition > textContainer.offsetTop - window.innerHeight + 100) {
+                    typeText();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

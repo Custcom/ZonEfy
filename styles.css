@@ -1,0 +1,124 @@
+body {
+    background-color: #090909;
+}
+
+#logo {
+    padding: 15px;
+}
+
+.title_block {
+    background-image: linear-gradient(to right, #1C001E, #44000B);
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 10px;
+    color: #E9C7B1;
+    -webkit-background-clip: text;
+    font-size: 48px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+    padding: 0 20px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#alst {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 40px;
+}
+
+.div1 {
+    display: flex; 
+}
+
+#ecom_img {
+    padding: 30px 90px; 
+}
+
+#tag_line {
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 10px;
+    color: aliceblue;
+    padding: 30px;
+    padding-left: 50px ;
+    padding-top: 50px;
+}
+
+#tag_line h1{
+    font-size: 50px;
+}
+#tag_line p{
+    font-size: 30px;
+}
+
+.box {
+    background-color: #2D2D2D;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.prd1,
+.prd2,
+.prd3 {
+    opacity: 0.5;
+    font-family: 'Chakra Petch', sans-serif;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #2D2D2D;
+    width: 750px; /* Adjusted width for the boxes (since there are three of them) */
+    margin-bottom: 20px; /* Add some space between the boxes */
+    transition: opacity 0.3s, background-color 0.5s;
+}
+.prd1:hover,.prd2:hover,.prd3:hover{
+    opacity: 1;
+    background-color: #090909;
+
+}
+.prd1 ul,
+.prd2 ul,
+.prd3 ul {
+    font-size: 24px; /* Increase the font size */
+    line-height: 1.6; /* Increase the line height for better readability */
+}
+
+.prd1 h1,
+.prd2 h1,
+.prd3 h1 {
+    font-size: 36px; /* Increase the font size for the headings */
+}
+
+.prd1,.prd2 ,.prd3{
+    width: 100%;
+    display: flex;
+  
+    justify-content: space-between; /* Adjust the spacing */
+}
+
+#retailer,
+#buyer,
+#premium {
+    height: 400px;
+    width: 400px;
+}
+
+#for_ret{
+    font-size: 20px;
+}
