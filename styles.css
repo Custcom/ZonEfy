@@ -4,10 +4,24 @@ body {
 
 #logo {
     padding: 15px;
+    transition: transform 0.9s; 
+}
+
+#logo:hover {
+    transform: rotateY(360deg)
+}
+
+.title {
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 10px;
+    color: #E9C7B1;
+    -webkit-background-clip: text;
+    font-size: 48px;
 }
 
 .title_block {
     background-image: linear-gradient(to right, #1C001E, #44000B);
+    border-radius: 5px;
     height: 100px;
     width: 100%;
     display: flex;
@@ -37,7 +51,17 @@ body {
     text-decoration: none;
     color: aliceblue;
     padding: 40px;
+    transition: transform 0.5s;
+
 }
+
+#alst:hover {
+    text-decoration: underline;
+    transform: scale(1.07);
+}
+
+
+
 
 .div1 {
     display: flex; 
@@ -45,6 +69,7 @@ body {
 
 #ecom_img {
     padding: 30px 90px; 
+    animation: fadeIn 5s ease-in;
 }
 
 #tag_line {
@@ -56,15 +81,28 @@ body {
     padding-top: 50px;
 }
 
-#tag_line h1{
+#tag_line h1 {
     font-size: 50px;
+    animation: fadeIn 2s ease-in;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #tag_line p{
-    font-size: 30px;
+    font-size: 23px;
 }
 
 .box {
-    background-color: #2D2D2D;
+    background-color: #090909;
     padding: 20px;
 }
 
@@ -74,24 +112,26 @@ nav {
     margin-bottom: 20px;
 }
 
-.prd1,
-.prd2,
-.prd3 {
+.prd1, .prd2, .prd3 {
     opacity: 0.5;
     font-family: 'Chakra Petch', sans-serif;
     color: aliceblue;
     border-radius: 10px;
     padding: 30px;
     background-color: #2D2D2D;
-    width: 750px; /* Adjusted width for the boxes (since there are three of them) */
-    margin-bottom: 20px; /* Add some space between the boxes */
-    transition: opacity 0.3s, background-color 0.5s;
+    background: linear-gradient(to right, #1C001E, #44000B);
+    width: 750px;
+    margin-bottom: 20px;
+    transition: opacity 0.3s, background-color 0.5s, transform 0.3s, box-shadow 0.3s; /* Added transform and box-shadow for animation */
 }
-.prd1:hover,.prd2:hover,.prd3:hover{
-    opacity: 1;
-    background-color: #090909;
 
+.prd1:hover, .prd2:hover, .prd3:hover {
+    opacity: 1;
+    box-shadow: 0 4px 10px rgba(88, 83, 83, 0.2);
+    transform: scale(1.02); /* Scale up by 5% on hover */
 }
+
+
 .prd1 ul,
 .prd2 ul,
 .prd3 ul {
@@ -121,4 +161,9 @@ nav {
 
 #for_ret{
     font-size: 20px;
+}
+
+.prd1:hover img, .prd2:hover img, .prd3:hover img {
+    transform: translateY(-10px); /* Adjust the vertical distance as needed */
+    transition: transform 0.5s ease-in-out; /* Add a smooth transition for the floating effect */
 }
