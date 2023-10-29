@@ -163,7 +163,20 @@ nav {
     font-size: 20px;
 }
 
-.prd1:hover img, .prd2:hover img, .prd3:hover img {
+.prd1:hover img, .prd2:hover img, .prd3:hover img, .soon:hover {
     transform: translateY(-10px); /* Adjust the vertical distance as needed */
     transition: transform 0.5s ease-in-out; /* Add a smooth transition for the floating effect */
 }
+
+#soontxt{
+    display: flex;
+    align-items: center;
+    font-size: 40px; 
+    font-family: 'Chakra Petch', sans-serif;
+    color: aliceblue;
+    justify-content: center;
+}
+
+
+
+
